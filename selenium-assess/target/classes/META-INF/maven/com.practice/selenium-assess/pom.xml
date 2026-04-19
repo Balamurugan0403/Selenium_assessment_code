@@ -37,10 +37,5 @@
         <scope>test</scope>
     </dependency>
 
-  <dependency>
-  	<groupId>com.selenium_testng</groupId>
-  	<artifactId>demotestng</artifactId>
-  	<version>0.0.1-SNAPSHOT</version>
-  </dependency>
   </dependencies>
 </project>
