@@ -27,8 +27,7 @@ public class Practice01 {
 		String actualUrl=driver.getCurrentUrl();
 		System.out.println(actualUrl);
 		SoftAssert soft=new SoftAssert();
-		soft.assertTrue(actualUrl.contains("automateexer"),"url invalid");
-		System.out.println("dggfdgfgfggg");
+		soft.assertTrue(actualUrl.contains("automationexercise"),"url invalid");
 //	      Assert.assertTrue(driver.getCurrentUrl().contains("automationexercise"),
 //	                "Home page not loaded");
 //		if(actualUrl.equals("https://automationexercise.com/")) {

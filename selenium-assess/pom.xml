@@ -29,6 +29,18 @@
     <artifactId>slf4j-simple</artifactId>
     <version>2.0.9</version>
   </dependency>
+      <!-- TestNG -->
+    <dependency>
+        <groupId>org.testng</groupId>
+        <artifactId>testng</artifactId>
+        <version>7.10.2</version>
+        <scope>test</scope>
+    </dependency>
 
-</dependencies>
+  <dependency>
+  	<groupId>com.selenium_testng</groupId>
+  	<artifactId>demotestng</artifactId>
+  	<version>0.0.1-SNAPSHOT</version>
+  </dependency>
+  </dependencies>
 </project>
