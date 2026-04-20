@@ -17,9 +17,12 @@ public class Practice01 {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
-		WebDriver driver =new ChromeDriver();
-		driver.manage().window().maximize();
-		ChromeOptions options=new ChromeOptions();
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--headless=new");
+		options.addArguments("--disable-gpu");
+		options.addArguments("--window-size=1920,1080");
+
+		WebDriver driver = new ChromeDriver(options);
 		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(10));
 		JavascriptExecutor js=(JavascriptExecutor)driver;
 		driver.get("https://automationexercise.com/");
@@ -35,9 +38,9 @@ public class Practice01 {
 			cart.click();
 			wait.until(ExpectedConditions.urlContains("https://automationexercise.com/view_cart"));
 			WebElement footer=driver.findElement(By.id("footer"));
-			Thread.sleep(2000); // before scroll
+//			Thread.sleep(2000); // before scroll
 			js.executeScript("arguments[0].scrollIntoView({block:'center'});", footer);
-			Thread.sleep(2000); // after scroll
+//			Thread.sleep(2000); // after scroll
 			String expectedtext="SUBSCRIPTION";
 			WebElement actualtext=driver.findElement(By.xpath("//footer[@id=\"footer\"]//div[@class=\"single-widget\"]/h2"));
 			if(expectedtext.equals(actualtext.getText())){
@@ -54,8 +57,8 @@ public class Practice01 {
 			}
 			soft.assertAll();
 		
-		Thread.sleep(5000);
-		driver.close();
+//		Thread.sleep(5000);
+		driver.quit();
 
 	}
 
