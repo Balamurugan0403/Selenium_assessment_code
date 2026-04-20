@@ -18,7 +18,6 @@ public class Practice01 {
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
 		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--headless=new");
 		options.addArguments("--disable-gpu");
 		options.addArguments("--window-size=1920,1080");
 
